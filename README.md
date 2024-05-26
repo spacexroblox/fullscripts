@@ -1,1 +1,2 @@
-just scripts go to the normal repo (https://github.com/spacexroblox/donescripts) for the loadstrings
+# DONE SCRIPTS LINKED DOWN!
+for the loadstrings visit https://github.com/spacexroblox/donescripts/
