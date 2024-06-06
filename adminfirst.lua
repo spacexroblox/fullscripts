@@ -53,11 +53,11 @@ local MainTab = Window:CreateTab("Player", 17745859305) -- Title, Image
 
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed",
-   Range = {0, 300},
+   Range = {0, 4500},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
-   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "WalkSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
    end,
@@ -65,11 +65,11 @@ local Slider = MainTab:CreateSlider({
 
 local Slider = MainTab:CreateSlider({
    Name = "JumpPower",
-   Range = {0, 300},
+   Range = {0, 1000},
    Increment = 1,
    Suffix = "JP",
-   CurrentValue = 16,
-   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   CurrentValue = 50,
+   Flag = "JumpPower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
    end,
@@ -78,6 +78,6 @@ local Slider = MainTab:CreateSlider({
 local Button = MainTab:CreateButton({
    Name = "Destory Script",
    Callback = function()
-      Rayfield:Destroy()
+      ArrayField:Destroy()
    end,
 })
