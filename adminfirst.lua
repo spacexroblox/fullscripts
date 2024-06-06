@@ -63,7 +63,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "Button Example",
    Interact = 'Click',
    Callback = function()
