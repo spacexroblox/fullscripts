@@ -81,37 +81,3 @@ local Button = MainTab:CreateButton({
       Rayfield:Destroy()
    end,
 })
-
--- 2 Main
-local MainTab = Window:CreateTab("Test Features", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Home")
-
-local Button = MainTab:CreateButton({
-    Name = "Infinite Jump Toggle",
-    Callback = function()
-        --Toggles the infinite jump between on or off on every script run
- _G.infinjump = not _G.infinjump
- 
- if _G.infinJumpStarted == nil then
-     --Ensures this only runs once to save resources
-     _G.infinJumpStarted = true
-     
-     --Notifies readiness
-     game.StarterGui:SetCore("SendNotification", {Title="TooColdHub"; Text="Infinite Jump Activated!"; Duration=5;})
- 
-     --The actual infinite jump
-     local plr = game:GetService('Players').LocalPlayer
-     local m = plr:GetMouse()
-     m.KeyDown:connect(function(k)
-         if _G.infinjump then
-             if k:byte() == 32 then
-             humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
-             humanoid:ChangeState('Jumping')
-             wait()
-             humanoid:ChangeState('Seated')
-             end
-         end
-     end)
- end
-    end,
- })
