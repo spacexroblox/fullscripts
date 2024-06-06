@@ -115,7 +115,3 @@ local Button = MainTab:CreateButton({
  end
     end,
  })
-
-})
-
-
