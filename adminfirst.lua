@@ -52,58 +52,70 @@ ArrayField:Notify({
 local MainTab = Window:CreateTab("Player", 17745859305) -- Title, Image
 
 local Slider = MainTab:CreateSlider({
-   Name = "Speed",
-   Range = {0, 5000},
+   Name = "WalkSpeed",
+   Range = {0, 300},
    Increment = 1,
-   Suffix = nil,
+   Suffix = "Speed",
    CurrentValue = 16,
-   Flag = "Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
    end,
 })
 
 local Slider = MainTab:CreateSlider({
-   Name = "Jump Power",
-   Range = {50, 1000},
-   Increment = 100,
-   Suffix = "Power",
-   CurrentValue = 50,
+   Name = "JumpPower",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "JP",
+   CurrentValue = 16,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+  game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Inf Jump",
-   Interact = 'Click',
+   Name = "Destory Script",
    Callback = function()
-	   --Toggles the infinite jump between on or off on every script run
-_G.infinjump = not _G.infinjump
-
-if _G.infinJumpStarted == nil then
-	--Ensures this only runs once to save resources
-	_G.infinJumpStarted = true
-	
-	--Notifies readiness
-	game.StarterGui:SetCore("SendNotification", {Title="WeAreDevs.net"; Text="The WeAreDevs Infinite Jump exploit is ready!"; Duration=5;})
-
-	--The actual infinite jump
-	local plr = game:GetService('Players').LocalPlayer
-	local m = plr:GetMouse()
-	m.KeyDown:connect(function(k)
-		if _G.infinjump then
-			if k:byte() == 32 then
-			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
-			humanoid:ChangeState('Jumping')
-			wait()
-			humanoid:ChangeState('Seated')
-			end
-		end
-	end)
-end
+      Rayfield:Destroy()
    end,
+})
+
+-- 2 Main
+local MainTab = Window:CreateTab("Test Features", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Home")
+
+local Button = MainTab:CreateButton({
+    Name = "Infinite Jump Toggle",
+    Callback = function()
+        --Toggles the infinite jump between on or off on every script run
+ _G.infinjump = not _G.infinjump
+ 
+ if _G.infinJumpStarted == nil then
+     --Ensures this only runs once to save resources
+     _G.infinJumpStarted = true
+     
+     --Notifies readiness
+     game.StarterGui:SetCore("SendNotification", {Title="TooColdHub"; Text="Infinite Jump Activated!"; Duration=5;})
+ 
+     --The actual infinite jump
+     local plr = game:GetService('Players').LocalPlayer
+     local m = plr:GetMouse()
+     m.KeyDown:connect(function(k)
+         if _G.infinjump then
+             if k:byte() == 32 then
+             humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+             humanoid:ChangeState('Jumping')
+             wait()
+             humanoid:ChangeState('Seated')
+             end
+         end
+     end)
+ end
+    end,
+ })
+
 })
 
 
