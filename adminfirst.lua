@@ -75,7 +75,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "Inf Jump",
    Interact = 'Click',
    Callback = function()
