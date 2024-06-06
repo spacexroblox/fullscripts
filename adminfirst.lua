@@ -8,11 +8,13 @@ local Window = Rayfield:CreateWindow({
       Enabled = true,
       FolderName = Admin Hub, -- Create a custom folder for your hub/game
       FileName = "admin-autosave"
+         
    },
    Discord = {
       Enabled = true,
       Invite = "697SeR9d", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+         
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
