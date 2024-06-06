@@ -94,7 +94,7 @@ end
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "Fly (E to unfly)",
    Interact = 'Click',
    Callback = function()
