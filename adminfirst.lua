@@ -63,7 +63,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = MainTab:CreateSlider({
    Name = "Jump Power",
    Range = {50, 250},
    Increment = 5,
