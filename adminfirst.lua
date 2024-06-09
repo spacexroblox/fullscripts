@@ -8,15 +8,16 @@ local Tab1 = Window:MakeTab({
 })
 
 OrionLib:MakeNotification({
-	Name = "Executed!",
-	Content = "Script executed, you're good to go :)",
-	Image = "rbxassetid://17745895217",
+	Name = "Locked & Loaded",
+	Content = "Executed script, enjoy!",
+	Image = "rbxassetid://4483345998",
 	Time = 5
 })
 
+
 Tab1:AddSlider({
 	Name = "Walkspeed",
-	Min = 0,
+	Min = 16,
 	Max = 5000,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
@@ -30,7 +31,7 @@ Tab1:AddSlider({
 
 Tab1:AddSlider({
 	Name = "Jump Power",
-	Min = 0,
+	Min = 50,
 	Max = 5000,
 	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
@@ -51,7 +52,7 @@ _G.infinjump = not _G.infinjump
 
 if _G.infinJumpStarted == nil then
 	--Ensures this only runs once to save resources
-	_G.infinJumpStarted = true
+	_G.infinJumpStarted = false
 	
 	--Notifies readiness
 	game.StarterGui:SetCore("SendNotification", {Title="WeAreDevs.net"; Text="The WeAreDevs Infinite Jump exploit is ready!"; Duration=5;})
@@ -73,6 +74,16 @@ end
 		print(Value)
 	end    
 })
+
+Tab1:AddButton({
+	Name = "Fly, Keyboard (G to fly)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/keyboard.txt"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/8uzbykJb"))()
+      		print("Fly And Keyboard")
+  	end    
+})
+
 
 
 local Tab1 = Window:MakeTab({
@@ -106,7 +117,7 @@ Tab1:AddButton({
 })
 
 local Tab1 = Window:MakeTab({
-	Name = "ESP",
+	Name = "ESP ecc.",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -114,7 +125,46 @@ local Tab1 = Window:MakeTab({
 Tab1:AddButton({
 	Name = "ESP Loader",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexroblox/fullscripts/main/esp.lua"))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/zzerexx/scripts/main/UniversalEsp.lua'))()
       		print("ESP Loaded")
   	end    
+})
+
+Tab1:AddButton({
+	Name = "Aimbot (ONLY MOUSE)",
+	Callback = function()
+		local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
+		Aimbot.Load()
+      		print("Aimbot Mouse")
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "AimBot Skidded (GUI)",
+	Callback = function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Yousuck780/troll-x/main/ahhhh"), true))()
+      		print("Aimbot Skidded Loaded")
+  	end    
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Misc (Games, ecc.)",
+	Icon = "rbxassetid://17798380037",
+	PremiumOnly = false
+})
+
+Tab1:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab1:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
 })
