@@ -148,23 +148,31 @@ Tab1:AddButton({
 })
 
 local Tab1 = Window:MakeTab({
-	Name = "Misc (Games, ecc.)",
+	Name = "Misc (Games, ecc)",
 	Icon = "rbxassetid://17798380037",
 	PremiumOnly = false
 })
 
 Tab1:AddButton({
-	Name = "Button!",
+	Name = "Cart ride troll 1",
 	Callback = function()
-      		print("button pressed")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ZOMBIEKING9998/ZOMBIEKING9998/main/Cart%20Ride%20INTO%20Rdite"))()
+      		print("Rdite V96")
   	end    
 })
 
-Tab1:AddTextbox({
-	Name = "Textbox",
-	Default = "default box input",
-	TextDisappear = true,
-	Callback = function(Value)
-		print(Value)
-	end	  
+Tab1:AddButton({
+	Name = "Cart ride troll 2",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexroblox/fullscripts/main/rdite.lua"))()
+      		print("cart ride troll")
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Fling Things And People",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua"))()
+      		print("FTAP")
+  	end    
 })
